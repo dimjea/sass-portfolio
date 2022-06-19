@@ -1,0 +1,93 @@
+@use "../abstracts" as *;
+.header {
+    margin-top: 8rem;
+    position: relative;
+    &::after{
+        @include position(absolute, 0, 0, null, null);
+        content: "";
+        width: 50%;
+        height: calc(100vh - 8rem);
+        background: url("./assets/images/DSC_0856.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 15%;
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+        @include responsive(md) {
+            width: 100%;
+            height: calc(50vh - 8rem);
+            background-position: 0 40%;
+            clip-path: none;
+        }
+        //clip-path: polygon(20% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0 100%);
+
+
+    }
+    &__data {
+        width: 100%;
+        height: calc(100vh - 11rem);
+        @include flexbox(null, center);
+        @include responsive(md) {
+            height: calc(50vh - 3rem);
+            margin-top: calc(50vh - 7rem);
+            justify-content: center;
+
+        }
+        @include responsive(xsm) {
+            justify-content: flex-start;
+        }
+        &__contents {
+            &__top {
+                font-size: 1.7rem;
+                font-weight: 500;
+                text-transform: none;
+                color: $black;
+                @include responsive(xsm) {
+                    font-size: 1.6rem;
+                }
+            }
+            &__heading {
+                margin-top: 1.5rem;
+                font-size: 4.5rem;
+                font-weight: 900;
+                line-height: 4.5rem;
+                background: linear-gradient(45deg, $black 50%, $green-400 50%);
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                text-transform: none;
+                @include responsive(md) {
+                    font-size: 4rem;
+                    line-height: 4rem;
+                }
+                @include responsive(sm) {
+                    font-size: 3.3rem;
+                    line-height: 3.3rem;
+                    margin-top: 1rem;
+                    font-weight: 800;
+                }
+                @include responsive(xsm) {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    font-weight: 700;
+                }
+            }
+            &__bottom {
+                margin-top: 1.5rem;
+                text-transform: none;
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: $black;
+                @include responsive(sm) {
+                    margin-top: 1rem;
+                }
+                @include responsive(xsm) {
+                    font-size: 1.2rem;
+
+                }
+            }
+            &__links {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
