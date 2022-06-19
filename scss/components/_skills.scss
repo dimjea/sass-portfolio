@@ -5,8 +5,15 @@
     @include responsive(xsm) {
         padding-top: 4rem;
     }
+    @include responsive (sm) {
+        margin-top: -10rem;
+    }
     .heading {
         text-align: left;
+        @include responsive (sm){
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
         &::after {
             @include position(absolute, 50%, null, null, 0);
             content: "";
@@ -15,7 +22,11 @@
             background: $green-600;
             opacity: 0.5;
             @include responsive(sm) {
-                width: 4.5rem;
+                visibility: hidden;
+            }
+            @include responsive(md) {
+                //width: 7.2rem;
+                visibility: hidden;
             }
         }
     }
