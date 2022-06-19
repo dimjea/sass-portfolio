@@ -426,6 +426,9 @@ body {
   text-align: center;
   margin-bottom: 4rem;
   margin-top: -0.3rem;
+
+  margin-top: 2.3rem;
+
 }
 .about .heading::after {
   position: absolute;
@@ -439,6 +442,7 @@ body {
 }
 @media (max-width: 768px) {
   .about .heading::after {
+
     visibility: hidden;
   }
 }
@@ -453,6 +457,10 @@ body {
 @media (max-width: 992px) {
   .about .heading::after {
     visibility: hidden;
+    width: 34.1rem;
+    position: absolute;
+    top: 50%;
+    left: 11%;
   }
 }
 .about__image {
@@ -575,6 +583,7 @@ body {
 .education {
   padding: 8rem 0;
 }
+
 @media (max-width: 768px) {
   .education {
     margin-top: -10rem;
@@ -765,6 +774,7 @@ body {
 @media (max-width: 992px) {
   .projects .heading::after {
     visibility: hidden;
+    width: 7.2rem;
   }
 }
 .projects__card {
@@ -883,6 +893,9 @@ body {
     margin-bottom: 3rem;
   }
 }
+.skills .heading {
+  text-align: left;
+}
 .skills .heading::after {
   position: absolute;
   top: 50%;
@@ -901,6 +914,7 @@ body {
 @media (max-width: 992px) {
   .skills .heading::after {
     visibility: hidden;
+    width: 4.5rem;
   }
 }
 .skills__contents {
