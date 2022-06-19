@@ -15,8 +15,18 @@
             background: $green-600;
             opacity: 0.5;
             @include responsive (sm) {
+                //width: 34.1rem;
+                //@include position(absolute, 50%, null, null, 11%);
+                visibility: hidden;
+            }
+            @include responsive (lg) {
                 width: 34.1rem;
-                @include position(absolute, 50%, null, null, 11%);
+                @include position(absolute, 50%, null, null, 17%);
+            }
+            @include responsive (md) {
+                visibility: hidden;
+                //width: 34.1rem;
+                //@include position(absolute, 50%, null, null, 6.3%);
             }
         }
     }

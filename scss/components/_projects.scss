@@ -5,6 +5,9 @@
     @include responsive(xsm) {
         padding-top: 4rem;
     }
+    @include responsive(sm) {
+        margin-top: -9rem;
+    }
     .heading {
         text-align: left;
         //margin-top: -4.3rem;
@@ -17,7 +20,12 @@
             background: $green-600;
             opacity: 0.5;
             @include responsive(sm) {
-                width: 7.2rem;
+                //width: 7.2rem;
+                visibility: hidden;
+            }
+            @include responsive(md) {
+                //width: 7.2rem;
+                visibility: hidden;
             }
         }
     }

@@ -2,6 +2,9 @@
 
 .education {
     padding: $padding-y 0;
+    @include responsive (sm) {
+        margin-top: -10rem;
+    }
     .heading {
         text-align: center;
         margin-bottom: .5rem;
@@ -13,6 +16,12 @@
             height: .5rem;
             background: $green-600;
             opacity: 0.5;
+            @include responsive (md) {
+                visibility: hidden;
+            }
+            @include responsive (lg) {
+                visibility: hidden;
+            }
         }
         
     }

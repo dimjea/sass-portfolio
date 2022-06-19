@@ -4,6 +4,9 @@
     padding: $padding-y 0;
     background: linear-gradient(to top, $white 50%, $white 50%);
     margin-top: -13rem;
+    @include responsive (sm){
+        margin-top: -35rem;
+    }
     &__image {
         width: 18rem;
         height: 18rem;
@@ -13,6 +16,12 @@
         position: relative;
         margin-left: 15rem;
         margin-top: 25rem;
+        @include responsive(sm) {
+            visibility: hidden;
+        }
+        @include responsive(md) {
+            visibility: hidden;
+        }
         img {
             @include imageCover;
             border-radius: 50%;
@@ -26,6 +35,15 @@
             font-weight: 500;
             text-transform: capitalize;
             border-top-left-radius: 50%;
+            @include responsive(sm) {
+                visibility: hidden;
+            }
+            @include responsive(md) {
+                visibility: hidden;
+            }
+            @include responsive(ls) {
+                visibility: hidden;
+            }
         }
     }
     &__copyright {
@@ -35,6 +53,14 @@
         color: $black;
         margin-left: 7rem;
         text-align: center;
+        @include responsive(md) {
+            visibility: hidden;
+            margin-top: -55rem;
+        }
+        @include responsive(sm) {
+            visibility: hidden;
+            margin-top: -33rem;
+        }
         &--name {
             font-size: 1.5rem;
             font-weight: 500;
